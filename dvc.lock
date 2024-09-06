@@ -1,0 +1,36 @@
+schema: '2.0'
+stages:
+  prepare:
+    cmd: python scripts/load_data.py
+    deps:
+      - path: scripts/load_data.py
+        md5: 286f84bdbbaff728d5095a5c109fd473
+        size: 1802
+    params:
+      params.yaml:
+        prepare.random_seed: 42
+        prepare.test_size: 0.2
+    outs:
+      - path: data/test.csv
+        md5: c0b864d50c08fae4dbb39c0fa96d4135
+        size: 2484
+      - path: data/train.csv
+        md5: c76fab6a8db00a326bba2fe961bbee33
+        size: 9900
+  clean:
+    cmd: python scripts/clean_data.py
+    deps:
+      - path: data/raw_stream.csv
+        md5: d12555fe2ba28d871907afffe8743c52
+        size: 101760
+      - path: scripts/clean_data.py
+        md5: d528c1f5d31152275d6cf8f6e40547a9
+        size: 2818
+    params:
+      params.yaml:
+        clean.max_words: 100
+        clean.min_words: 10
+    outs:
+      - path: data/stream.csv
+        md5: 5781a9155d9dc9fafebcbd9f0df57a9d
+        size: 85450
