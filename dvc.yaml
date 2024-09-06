@@ -1,0 +1,22 @@
+stages:
+  prepare:
+    cmd: python scripts/load_data.py
+    deps:
+      - scripts/load_data.py
+    params:
+      - prepare.random_seed
+      - prepare.test_size
+    outs:
+      - data/test.csv
+      - data/train.csv
+
+  clean:
+    cmd: python scripts/clean_data.py
+    deps:
+      - data/raw_stream.csv
+      - scripts/clean_data.py
+    params:
+      - clean.max_words
+      - clean.min_words
+    outs:
+      - data/stream.csv
