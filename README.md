@@ -1,10 +1,14 @@
-# Real-Time Financial News Sentiment MLOps Pipeline & Monitoring Service
+<div align="center">
+  <img src="assets/hero-banner.svg" alt="FinBERT Real-Time Sentiment MLOps" width="100%" />
+  <br/><br/>
+  [![CI/CD](https://github.com/kenseiAmit/finbert-sentiment-mlops-service/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/kenseiAmit/finbert-sentiment-mlops-service/actions/workflows/ci-cd.yml)
+  ![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=flat-square&logo=python&logoColor=white)
+  ![FinBERT](https://img.shields.io/badge/Model-FinBERT%20Market%20Sentiment-FFD21E?style=flat-square&logo=huggingface&logoColor=black)
+  ![Stack](https://img.shields.io/badge/DVC%20%7C%20MLflow%20%7C%20Prometheus%20%7C%20Deepchecks-0D9488?style=flat-square)
+  ![License](https://img.shields.io/badge/License-MIT-slate?style=flat-square)
+</div>
 
-[![CI/CD](https://github.com/kenseiAmit/finbert-sentiment-mlops-service/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/kenseiAmit/finbert-sentiment-mlops-service/actions/workflows/ci-cd.yml)
-![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=flat-square&logo=python&logoColor=white)
-![FinBERT](https://img.shields.io/badge/Model-FinBERT%20Market%20Sentiment-FFD21E?style=flat-square&logo=huggingface&logoColor=black)
-![Stack](https://img.shields.io/badge/DVC%20%7C%20MLflow%20%7C%20Prometheus%20%7C%20Deepchecks-0D9488?style=flat-square)
-![License](https://img.shields.io/badge/License-MIT-slate?style=flat-square)
+---
 
 End-to-end MLOps pipeline and production inference microservice for real-time financial market headline sentiment analysis (`baptle/FinBERT_market_based`)—integrating **DVC** reproducible data versioning, **MLflow** experiment tracking & F1-gated `@production` promotion, **FastAPI + Prometheus** observability, **Deepchecks NLP** property/prediction drift CI gates, windowed stream monitoring, and containerized **AWS ECR / ECS Fargate** deployment.
 
