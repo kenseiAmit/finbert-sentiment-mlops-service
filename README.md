@@ -12,6 +12,8 @@
 
 ---
 
+![FinBERT Financial Sentiment MLOps — DVC, MLflow & ECS Blueprint](docs/images/architecture_blueprint.png)
+
 End-to-end MLOps pipeline and production inference microservice for real-time financial market headline sentiment analysis (`baptle/FinBERT_market_based`)—integrating **DVC** reproducible data versioning, **MLflow** experiment tracking & F1-gated `@production` promotion, **FastAPI + Prometheus** observability, **Deepchecks NLP** property/prediction drift CI gates, windowed stream monitoring, and containerized **AWS ECR / ECS Fargate** deployment.
 
 ![FinBERT Pipeline & Quality Gates](docs/images/finbert_pipeline_and_gates.png)
